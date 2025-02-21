@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import ThemeToggle from "./ThemeToggle";
+import ThemeToggle from "./ThemeSwitch";
+import ThemeSwitch from "./ThemeSwitch";
 
 export default function Navbar() {
   return (
@@ -12,7 +13,7 @@ export default function Navbar() {
       >
         bSol v1.03
       </Link>
-      <ThemeToggle />
+      <ThemeSwitch />
     </nav>
   );
 }
