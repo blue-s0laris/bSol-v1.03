@@ -1,14 +1,18 @@
 import type { Metadata } from "next";
-import { Ubuntu } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Credits";
 import { Providers } from "./providers";
 
-const ubuntuSans = Ubuntu({
-  variable: "--font-ubuntu-sans",
+const geistSans = Geist({
+  variable: "--font-geist-sans",
   subsets: ["latin"],
-  weight: "300",
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -25,13 +29,11 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${ubuntuSans.variable} ${ubuntuSans.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Providers>
           <Navbar />
-          <main className="min-h-screen bg-white dark:bg-[#1a1613] text-[#000000] dark:text-[#ffffff]">
-            {children}
-          </main>
+          <main className="min-h-screen">{children}</main>
           <Footer />
         </Providers>
       </body>

@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import ThemeSwitch from "./ThemeSwitch";
 import Image from "next/image";
+import ThemeSwitch from "./ThemeSwitch";
 
 export default function Navbar() {
   return (
